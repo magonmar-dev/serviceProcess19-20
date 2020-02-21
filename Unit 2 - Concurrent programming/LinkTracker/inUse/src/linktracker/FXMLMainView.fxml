@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="693.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="linktracker.FXMLMainViewController">
+   <children>
+      <BorderPane prefHeight="400.0" prefWidth="693.0">
+         <top>
+            <MenuBar BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#loadFile" text="Load file..." />
+                        <MenuItem mnemonicParsing="false" onAction="#exit" text="Exit" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Process">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#startProcess" text="Start" />
+                        <MenuItem mnemonicParsing="false" onAction="#clearProcess" text="Clear" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+         <left>
+            <ListView fx:id="lvWebPages" onMouseClicked="#showLinks" prefHeight="374.0" prefWidth="183.0" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <ListView fx:id="lvLinks" prefHeight="374.0" prefWidth="361.0" BorderPane.alignment="CENTER" />
+         </right>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="38.0" layoutY="48.0" text="Total pages">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblTotalPages" alignment="CENTER" layoutX="63.0" layoutY="81.0" prefHeight="20.0" prefWidth="29.0" text="0" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="43.0" layoutY="142.0" text="Processed">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="43.0" layoutY="242.0" text="Total links">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblProcessed" alignment="CENTER" layoutX="58.0" layoutY="174.0" prefHeight="26.0" prefWidth="40.0" text="0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblTotalLinks" alignment="CENTER" layoutX="56.0" layoutY="276.0" prefHeight="26.0" prefWidth="44.0" text="0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,14 @@
+.root {
+    -fx-background-color: lightblue;
+    -fx-font-family: "Arial";
+    -fx-text-fill: gray;
+}
+
+.split-pane {
+   -fx-background-color: transparent;
+}
+
+.button {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
